@@ -49,27 +49,10 @@ def load_colorization_model():
 model = load_colorization_model()
 
 # === Streamlit UI ===
-st.title("B/W Image Colorization 🌄🌲(Mountains & Forest)")
+st.title("Greyscale Image Colorization (Mountains & Forest)")
 st.markdown("Upload a grayscale image of a mountain or forest landscape and get the colorized version with PSNR/SSIM metrics.")
 
 uploaded_file = st.sidebar.file_uploader("Upload a black & white image of a mountain or forest landscape", type=["jpg", "png", "jpeg"])
-
-# if uploaded_file:
-#     uploaded_image = Image.open(uploaded_file)
-#     st.image(uploaded_image, caption="Original Image", use_container_width=True)
-
-#     with st.spinner("Colorizing..."):
-#         L_channel, ab_true, original_resized = preprocess_image(uploaded_image)
-#         input_L = np.expand_dims(L_channel, axis=0)  # (1, 128, 128, 1)
-
-#         predicted_ab = model.predict(input_L)[0]  # (128, 128, 2)
-#         colorized_image = lab_to_rgb(L_channel, predicted_ab)  # [0, 1] float
-
-#         # Convert colorized image to uint8
-#         colorized_uint8 = (colorized_image * 255).astype(np.uint8)
-
-#         # Show colorized image
-#         st.image(colorized_uint8, caption="Colorized Output", use_container_width=True)
 
 if uploaded_file:
     uploaded_image = Image.open(uploaded_file)
