@@ -21,7 +21,7 @@ Original Dataset Link: https://www.kaggle.com/datasets/benjaminkz/places365 \
 *(Subset contains only images of mountains(5000) and forests(5000), total 10000 images split into 90:5:5 (train:test:val) for model training)\
 *(it contains .tar.gz files - need to be extracted)
 
-# 🚀 Run the Bild
+# 🚀 Run the Build
 Make sure you have Python installed, then ->\
 Open the build folder in your code editor and then ->\
 pip install -r requirements.txt\
